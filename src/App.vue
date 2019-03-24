@@ -1,13 +1,18 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+    <router-view></router-view>
+    <NavBottom></NavBottom>
+
   </div>
 </template>
 
 <script>
+  import NavBottom from './components/NavBottom.vue'
 export default {
-  name: 'App'
+  name: 'App',
+  components:{
+    NavBottom
+  }
 }
 </script>
 

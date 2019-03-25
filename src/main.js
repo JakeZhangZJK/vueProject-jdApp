@@ -4,6 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import './assets/css/base.css'
+import './assets/css/index.css'
+/*引入底部导航栏字体图标样式*/
+/*import './assets/myfont/iconfont.css'*/
 
 Vue.config.productionTip = false
 

@@ -43,7 +43,7 @@ textarea {
 }
 
 [class^='icon'] {
-    background: url("../images/sprites.png") no-repeat;
+    /*background: url("../images/sprites.png") no-repeat;*/
     background-size: 200px 200px;
 }
 
@@ -140,4 +140,11 @@ textarea {
     display: inline-flex;
     width: 100%;
     height: auto;
+
+
+}
+
+
+.active i,.active label{
+   color: #f60;
 }

@@ -5,6 +5,7 @@ import Catgory from '../components/catgory/Catgory'
 import Find from '../components/find/Find'
 import Cart from '../components/cart/Cart'
 import Mine from '../components/mine/Mine'
+import GoodsDetail from '../components/detail/GoodsDetail'
 
 Vue.use(Router)
 
@@ -14,6 +15,10 @@ export default new Router({
     {
       path: '/home',
       component: Home
+    },
+    {
+      path: '/detail/:id',
+      component: GoodsDetail
     },
     {
       path: '/catgory',

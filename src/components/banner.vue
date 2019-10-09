@@ -11,7 +11,7 @@
 
 <script>
   export default {
-    //name: 'testB',
+         /*//name: 'testB',*/
     data () {
       return {
         num:0,
@@ -25,15 +25,15 @@
     mounted:function(){   //生命周期  挂载完成
       this.play();
     },
-    methods:{   //方法
-      autoPlay:function(){
+    methods: {   // 方法
+      autoPlay: function () {
         this.num++;
-        if(this.num == this.imges.length){
+        if (this.num === this.imges.length){
           this.num = 0;
         }
       },
-      play:function(){
-        setInterval(this.autoPlay,2000);
+      play: function(){
+        setInterval(this.autoPlay, 2000);
       }
 
     }

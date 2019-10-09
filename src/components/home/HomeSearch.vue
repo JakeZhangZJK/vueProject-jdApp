@@ -5,7 +5,7 @@
         <a href="#" class="icon_logo"></a>
         <form action="#">
           <span class="icon_search"></span>
-          <input type="search" class="search" placeholder="小米9" @click="goSearch()">
+          <input type="search" class="search" placeholder="小米MIXAshpa" @click="goSearch()">
         </form>
         <router-link to="/login" class="logo_btn">登录</router-link>
       </div>

@@ -8,6 +8,7 @@
       <!--导航区-->
       <HomeNav />
       <!--展示区-->
+      <HomeShow/>
     </div>
   </div>
 </template>
@@ -16,6 +17,7 @@
 import HomeSearch from './HomeSearch'
 import HomeBanner from './HomeBanner'
 import HomeNav from './HomeNav'
+import HomeShow from './HomeShow'
   export default {
     name: 'Home',
     data(){
@@ -30,7 +32,8 @@ import HomeNav from './HomeNav'
     components:{
       HomeSearch,
       HomeBanner,
-      HomeNav
+      HomeNav,
+      HomeShow
     }
   }
 </script>

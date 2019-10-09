@@ -5,7 +5,7 @@
           <li v-for="(v,k) in navBottom">
             <router-link tag="li" :to="v.navName" class="tabItem">
             	<a href="javascript:;" class="tab-item-link ">
-                    <i class="iconfont" :class="v.icon"></i><br/>
+                    <i class="iconfont" :class="v.icon"></i>
                     <label>{{v.name}}</label>
                 </a>
             </router-link>
@@ -34,30 +34,6 @@
 </script>
 
 <style scoped>
-  .fixBottomBox ul {
-    display: flex;
-    justify-content: space-around;
-    margin-top:5px;
-    margin-left:40px;
-  }
-    .fixBottomBox ul li{
-      display: inline-flex;
-      width: 70px;
-      height: 50px;
-      text-align: center;
 
-    }
-  .fixBottomBox ul li a{
-    width: 70px;
-    height: 50px;
-    text-align: center;
 
-  }
-    .fixBottomBox ul li a label{
-      font-size:8px;
-      margin-top:27px;
-      margin-left:-22px;
-      text-align: center;
-
-    }
 </style>

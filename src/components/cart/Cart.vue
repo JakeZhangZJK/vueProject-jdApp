@@ -5,9 +5,9 @@
 <script>
   export default {
     name: 'Cart',
-    data(){
+    data () {
       return {
-        msg:'显示购物车'
+        msg: '显示购物车'
       }
     }
   }

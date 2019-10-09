@@ -10,7 +10,7 @@
   import NavBottom from './components/NavBottom.vue'
 export default {
   name: 'App',
-  components:{
+  components: {
     NavBottom
   }
 }

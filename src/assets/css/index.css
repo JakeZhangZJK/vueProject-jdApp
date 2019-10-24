@@ -79,6 +79,7 @@ body {
 /*轮播图*/
 
 .m_banner {
+  margin: 5px;
     width: 100%;
     overflow: hidden;
     position: relative;

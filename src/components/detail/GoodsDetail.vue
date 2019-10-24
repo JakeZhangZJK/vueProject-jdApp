@@ -1,4 +1,5 @@
 <template>
+  <div>
     <div class="goods_detail">
         <header class="top_bar">
             <a @click="goBack" class="icon_back"></a>
@@ -35,15 +36,15 @@
             <div class="m">
                 <ul class="m_box">
                     <li class="m_item">
-                        <a href="" class="m_item_link">
+                        <a href="#" class="m_item_link">
                             <em class="m_item_pic"></em>
                             <span class="m_item_name">卖家</span>
                         </a>
-                        <a href="" class="m_item_link">
+                        <a href="#" class="m_item_link">
                             <em class="m_item_pic two"></em>
                             <span class="m_item_name">关注</span>
                         </a>
-                        <a href="" class="m_item_link">
+                        <a href="#" class="m_item_link">
                             <em class="m_item_pic three"></em>
                             <span class="m_item_name">购物车</span>
                         </a>
@@ -56,6 +57,7 @@
             </div>
         </footer>
     </div>
+  </div>
 </template>
 <script>
     import Banner from '../public/Banner'
@@ -96,7 +98,7 @@
         }
   }
 </script>
-<style>
+<style scoped>
     @import '../../assets/css/detail.css';
     .cart_d_footer {
         z-index:10;

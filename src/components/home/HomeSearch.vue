@@ -18,7 +18,7 @@
     name: 'HomeSearch',
     methods: {
       goSearch(){
-        this.$router.push('/catgory');
+        this.$router.push('/search');
       }
     }
   }

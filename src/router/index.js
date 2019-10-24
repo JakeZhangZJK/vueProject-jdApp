@@ -6,6 +6,7 @@ import Find from '../components/find/Find'
 import Cart from '../components/cart/Cart'
 import Mine from '../components/mine/Mine'
 import GoodsDetail from '../components/detail/GoodsDetail'
+import SearchMain from '../components/search/SearchMain'
 
 Vue.use(Router)
 
@@ -15,6 +16,10 @@ export default new Router({
     {
       path: '/home',
       component: Home
+    },
+    {
+      path: '/search',
+      component: SearchMain
     },
     {
       path: '/detail/:id',

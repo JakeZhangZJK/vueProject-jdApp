@@ -30,6 +30,10 @@ export default new Router({
       component: Catgory
     },
     {
+      path: '/catgory/:id',
+      component: Catgory
+    },
+    {
       path: '/find',
       component: Find
     },

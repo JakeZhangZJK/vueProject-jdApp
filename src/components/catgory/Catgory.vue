@@ -1,18 +1,21 @@
 <template>
-  <h1>{{msg}}</h1>
+  <div>
+    <CatgoryHead />
+    <CatgoryMain />
+  </div>
 </template>
 
 <script>
-  export default {
-    name: 'Catgory',
-    data(){
-      return {
-        msg:'显示分类页'
-      }
-    }
+import CatgoryHead from './CatgoryHead';
+//import HomeSearch from '../home/HomeSearch';
+import CatgoryMain from './CatgoryMain';
+export default {
+  components:{
+    CatgoryHead,
+    CatgoryMain
   }
+}
 </script>
-
-<style scoped>
-
+<style> 
+@import '../../assets/css/category.css';
 </style>

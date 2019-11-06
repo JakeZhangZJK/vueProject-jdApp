@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import axios from 'axios'
+import store from './store/index'
 import VueLazyload from 'vue-lazyload'
 import router from './router'
 import './assets/css/base.css'
@@ -15,7 +16,7 @@ axios.defaults.baseURL = 'http://127.0.0.1:3333/'
 axios.defaults.headers['Content-Type'] = 'application/x-www-form-urlencoded'// 请求头部处理
 Vue.prototype.$http = axios
 Vue.use(VueLazyload, {
-  preLoad: 1.3,  // 表示lazyload的元素距离页面底部距离的百分比
+  preLoad: 1.3,  //  表示lazyload的元素距离页面底部距离的百分比
   error: require('./assets/images/err.png'),  // 图片加载失败后的显示的失败图片路径.
   loading: require('./assets/images/loading.gif'),// 图片正在加载中显示的loading图片的路径
   attempt: 1,   // 图片加载失败后的重试次数.默认为3.
@@ -26,6 +27,7 @@ Vue.use(VueLazyload, {
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

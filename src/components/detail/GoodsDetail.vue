@@ -72,7 +72,11 @@
         },
         mounted(){
             this.getData(this.$route.params.id);
+            this.$store.dispatch('hideNav')
         },
+     destroyed(){
+       this.$store.dispatch('showNav')
+     },
         methods:{
             goBack(){
                 //this.$router.push('/home');
@@ -100,7 +104,8 @@
 </script>
 <style scoped>
     @import '../../assets/css/detail.css';
-    .cart_d_footer {
-        z-index:10;
-    }
+    /*控制底部导航栏的显示层级*/
+    /*.cart_d_footer {*/
+    /*    z-index:10;*/
+    /*}*/
 </style>

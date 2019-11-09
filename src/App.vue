@@ -1,17 +1,21 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <NavBottom></NavBottom>
+    <NavBottom v-show="shownav"></NavBottom>
 
   </div>
 </template>
 
 <script>
   import NavBottom from './components/NavBottom.vue'
+  import {mapGetters} from 'vuex'
 export default {
   name: 'App',
   components: {
     NavBottom
+  },
+  computed:{
+    ...mapGetters(['shownav'])
   }
 }
 </script>

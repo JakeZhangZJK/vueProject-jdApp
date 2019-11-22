@@ -40,22 +40,29 @@
                             <em class="m_item_pic"></em>
                             <span class="m_item_name">卖家</span>
                         </a>
-                        <a href="#" class="m_item_link">
+                        <a href="javascript:void(0)" class="m_item_link">
                             <em class="m_item_pic two"></em>
                             <span class="m_item_name">关注</span>
                         </a>
-                        <a href="#" class="m_item_link">
+                        <a href="javascript:void(0)" class="m_item_link" @click="goCart()">
                             <em class="m_item_pic three"></em>
                             <span class="m_item_name">购物车</span>
                         </a>
                     </li>
                 </ul>
                 <div class="btn_box clearfix" >
-                    <a href="#" class="buy_now">加入购物车</a>
-                    <a href="#" class="buybuy">立即购买</a>
+                    <a href="javascript:void(0)" class="buy_now" @click="addToCart()">加入购物车</a>
+                    <a href="javascript:void(0)" class="buybuy">立即购买</a>
                 </div>
             </div>
         </footer>
+    </div>
+    <div class="pop_scucess" v-show="popStatus"><!--未写完-->
+      <div class="pop_box">
+        <div class="del_info">
+          已经成功加入购物车
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -64,24 +71,24 @@
    export default {
         data () {
             return {
-                num:0,
-                goodsImages:[],
-                goodsData:[],
-                flag:false
+              num:0,
+              goodsImages:[],
+              goodsData:[],
+              flag:false,
+              popStatus:false
             }
         },
         mounted(){
             this.getData(this.$route.params.id);
-            this.$store.dispatch('hideNav')
+            this.$store.dispatch('hideNav'); // 触发store中的隐藏底部导航栏的方法
+
         },
      destroyed(){
-       this.$store.dispatch('showNav')
+       this.$store.dispatch('showNav')// 触发store中的显示底部导航栏的方法
      },
         methods:{
             goBack(){
-                //this.$router.push('/home');
-                //this.$router.push({path:'/home'});
-                window.history.go(-1)
+              this.$router.go(-1);
             },
             getData(id){ 
                 let self = this;
@@ -95,7 +102,15 @@
                 },(error)=>{
                     console.log(error);
                 })
-            }
+            },
+          addToCart(){
+              let data = JSON.parse(JSON.stringify(this.goodsData[0]));
+              data.goods_num = 1;
+              this.$store.dispatch('addCard',data);// 将当前页面的数据存入store
+          },
+          goCart () {
+            this.$router.push('/cart');
+          }
         },
         components:{
             Banner

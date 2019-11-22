@@ -2,7 +2,9 @@
 // 定义状态属性
 var state = {
   count: 1,
-  shownav: true
+  shownav: true,
+  cartDatas: []
+
 }
 
 // 导出

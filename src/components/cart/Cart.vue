@@ -1,36 +1,23 @@
 <template>
-  <div>
-  <h1>{{msg}}</h1>
-
+  <div id="my_cart">
+    <CartHeaderView></CartHeaderView>
+    <CartMainView></CartMainView>
+    <CartFooterView></CartFooterView>
   </div>
 </template>
-
-
 <script>
-  // import { mapGetters ,mapActions} from 'vuex'
-  export default {
-    name: 'Cart',
-    data () {
-      return {
-        msg: '显示购物车'
-      }
-    },
-    computed:{
+  import CartHeaderView from './CartHeader.vue';
+  import CartMainView from './CartMain.vue';
+  import CartFooterView from './CartFooter.vue';
 
-    },
-    methods:{
-      // add(){
-      // this.$store.dispatch('add')
-      // },
-      // dec(){
-      //   this.$store.dispatch('dec')
-      // }
-
-
+  export default{
+    components:{
+      CartHeaderView,
+      CartMainView,
+      CartFooterView
     }
   }
 </script>
-
-<style scoped>
-
+<style>
+  @import '../../assets/css/cart.css';
 </style>

@@ -1,18 +1,19 @@
 <template>
-  <h1>{{msg}}</h1>
+  <div class="user_i">
+    <MineHeaderView></MineHeaderView>
+    <MineMainView></MineMainView>
+  </div>
 </template>
-
 <script>
-  export default {
-    name: 'Mine',
-    data(){
-      return {
-        msg:'显示我的'
-      }
+  import MineHeaderView from './MineHeader';
+  import MineMainView from './MineMain';
+  export default{
+    components:{
+      MineMainView,
+      MineHeaderView
     }
   }
 </script>
-
-<style scoped>
-
+<style>
+  @import '../../assets/css/mine.css';
 </style>

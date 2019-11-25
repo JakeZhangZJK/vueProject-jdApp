@@ -47,7 +47,6 @@ var mutations = {
         break;
       }
     }
-
   }
 }
 

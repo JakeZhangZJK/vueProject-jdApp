@@ -248,7 +248,7 @@ body {
 .cart_footer .all_check_box span {
   text-align: center;
   line-height: 50px;
-  margin-left: 36px;
+  margin-left: 0;
   color: #232326;
   font-weight: 600;
 }

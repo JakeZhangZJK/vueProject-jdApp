@@ -6,9 +6,9 @@
   </div>
 </template>
 <script>
-  import CartHeaderView from './CartHeader.vue';
-  import CartMainView from './CartMain.vue';
-  import CartFooterView from './CartFooter.vue';
+  import CartHeaderView from './CartHeader';
+  import CartMainView from './CartMain';
+  import CartFooterView from './CartFooter';
 
   export default{
     components:{

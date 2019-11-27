@@ -14,7 +14,7 @@
 		        </div>
 
 		        <div class="login_box">
-		            <a @click="goLogin()" class="btn_login">登录</a>
+		            <a class="btn_login">登录</a>
 		        </div>
 		        <div class="go_reg_box">
 		            <router-link tag="span" to="/register">快速注册</router-link>
@@ -33,20 +33,19 @@ export default {
   },
   methods:{
     goLogin(){
-      if(this.username == "" || this.password == ""){
+      if(this.username =="" || this.password ==""){
       	alert('请输入信息')
       }else {
       	let self = this;
       	let data = {
-
       		loginName:this.username,
-			    loginPawd:this.password
+			loginPawd:this.password
 		};
         self.$http.post('/login',data).then((res)=>{
-            console.log(res);
             if(res.status == 200){
-            	if(res.data.status == 1){
-            		window.sessionStorage.userInfo = res.data.user_name;
+            	if(res.data.status ==1){
+            	  console.log(res.data.user_id);
+            		window.sessionStorage.userInfo= res.data.user_name;
             		self.$router.push('/');
             	}else {
             		alert(res.data.msg)
@@ -57,7 +56,6 @@ export default {
             
         },(error)=>{
             console.log(error);
-            console.log(data)
         })
 }
     }

@@ -1,19 +1,19 @@
 <template>
-  <div class="user_i">
-    <MineHeaderView></MineHeaderView>
-    <MineMainView></MineMainView>
-  </div>
+	<div class="user_i">
+	<MineHeaderView></MineHeaderView>
+	<MineMainView></MineMainView>
+	</div>
 </template>
 <script>
-  import MineHeaderView from './MineHeader';
-  import MineMainView from './MineMain';
-  export default{
-    components:{
-      MineMainView,
-      MineHeaderView
-    }
-  }
+	import MineHeaderView from './MineHeader';
+	import MineMainView from './MineMain';
+	export default{
+		components:{
+			MineMainView,
+			MineHeaderView
+		}
+	}
 </script>
 <style>
-  @import '../../assets/css/mine.css';
+@import '../../assets/css/mine.css';
 </style>

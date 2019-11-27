@@ -3,7 +3,7 @@
 		    <div class="cart_content clearfix" v-for="(item,i) in cartDatas" :key="i">
 		        <div class="cart_shop clearfix">
 		            <div class="shop_info clearfix">
-						<input type="checkbox"/>
+						<input type="checkbox" v-model="item.check" @change="curCheckChange()"/>
 		                <img src="../../assets/images/buy-logo.png" alt="" class="shop_icon">
 		                <span class="shop_name">{{item.shop_name}}</span>
 		            </div>
@@ -95,8 +95,8 @@
 				this.popStatus = false; //弹层隐藏
 				this.$store.dispatch('delCartDatas',this.curId);  //获取curId的值
 			},
-			checkChange() {
-				this.$store.dispatch('checkChange');
+      curCheckChange() {
+				this.$store.dispatch('curCheckChange');
 			}
 		}
 	}

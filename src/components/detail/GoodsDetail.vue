@@ -106,6 +106,7 @@
           addToCart(){
               let data = JSON.parse(JSON.stringify(this.goodsData[0]));
               data.goods_num = 1;
+              data.check = false;// 商品的状态
               this.$store.dispatch('addCard',data);// 将当前页面的数据存入store
           },
           goCart () {

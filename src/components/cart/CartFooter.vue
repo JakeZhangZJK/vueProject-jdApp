@@ -2,7 +2,7 @@
 	<div class="cart_fo">
 		<footer class="cart_footer">
 			<div class="all_check_box">
-				<input type="checkbox">
+				<input type="checkbox" v-model="checkAllState"  @change="checkAllChange()">
 		        <span>全选</span>
 			</div>
 		    <div class="count_money_box">
@@ -31,11 +31,11 @@
 	export default {
 
 		computed:{
-	      ...mapGetters(['total']),
+	      ...mapGetters(['total','checkAllState']),
 	    },
 		methods: {
 			checkAllChange() {
-				this.$store.dispatch('allCheckChange');
+				this.$store.dispatch('checkAllChange');
 			}
 		}
 	}

@@ -27,7 +27,13 @@ var actions = {
   },
   delCartDatas ({commit, state}, data) {
     commit('DELCARTDATAS', data)
-}
+  },
+  checkAllChange ({commit, state}) {
+    commit('CHECKALLCHANGE')
+  },
+  curCheckChange ({commit, state}) { // 当前状态
+    commit('CURCHECKCHANGE')
+  }
 }
 
 // 导出

@@ -47,6 +47,19 @@ var mutations = {
         break;
       }
     }
+  },
+  CHECKALLCHANGE (state) {
+    state.checkAllState = !state.checkAllState;
+    state.cartDatas.forEach((item) => {
+      item.check = state.checkAllState;
+    })
+  },
+  CURCHECKCHANGE (state) {
+    var select = state.cartDatas.filter(function (v) {
+      return v.check === true;
+    });
+    // 匹配选中状态与lists的长度
+    select.length === state.cartDatas.length ? state.checkAllState = true : state.checkAllState = false;
   }
 }
 
